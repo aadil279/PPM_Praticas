@@ -16,7 +16,6 @@ object Ex3 {
     //ITERATIVE VERSION OF fun_d
     def fun_d_i(list:List[Double]): Double = {
         var sum: Double = 0.0
-
         var i = 0
         for(i <- 0 to list.length-1) {
             sum = sum + list(i)
