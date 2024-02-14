@@ -24,7 +24,7 @@ object Ex2 {
 
     /*  Write a method that receives a triple of Int numbers and returns a triple where the same
     numbers are ordered in descending order. */
-    def fun_C(x: (Int, Int, Int)): (Int, Int, Int) = {
+    def fun_c(x: (Int, Int, Int)): (Int, Int, Int) = {
         var (a,b) = fun_b(x._1,x._2,x._3)
         var c: Int = 0
         if(x._1 != a && x._1 != b) {
@@ -37,4 +37,24 @@ object Ex2 {
         (a,b,c)
     }
 
+    /*The sides of any triangle respect the following constraint: the sum of the lengths of any
+    two sides, is greater than the length of the third side. Write a method that receive the
+    length of three segments and return a Boolean value indicating whether the constraint
+    is satisfied. */
+    def fun_d(a:Int, b:Int, c:Int): Boolean = {
+        if(a > b+c || b>a+c || c>a+b) {
+            false
+        } else {
+            true
+        }
+    }
+
+    /* Write a method abrev that receives a string containing a person's name and returns a
+    string with the first and last name.
+    For example, abrev "José Carlos Martins Sousa" = "José Sousa" */
+    def fun_e(name:String): String = {
+        val names_array = name.split(" ")
+        val final_string = names_array(0) + " " + names_array(names_array.length - 1)
+        final_string
+    }
 }
